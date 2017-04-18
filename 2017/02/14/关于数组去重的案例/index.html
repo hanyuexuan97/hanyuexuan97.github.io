@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>关于数组去重的案例 | 寒月轩的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#000">
+    
+    
+    <meta name="keywords" content="技术,web,数组去重,出现最多的字符,最小的数字">
+    <meta name="description" content="每日一句 If you fall in love with your Mr Right,every day is like Valentine’s Day.其实爱对了人，每天都是情人节。">
+<meta name="keywords" content="技术,web,数组去重,出现最多的字符,最小的数字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于数组去重的案例">
+<meta property="og:url" content="http://yoursite.com/2017/02/14/关于数组去重的案例/index.html">
+<meta property="og:site_name" content="寒月轩的博客">
+<meta property="og:description" content="每日一句 If you fall in love with your Mr Right,every day is like Valentine’s Day.其实爱对了人，每天都是情人节。">
+<meta property="og:updated_time" content="2017-02-17T12:58:23.156Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于数组去重的案例">
+<meta name="twitter:description" content="每日一句 If you fall in love with your Mr Right,every day is like Valentine’s Day.其实爱对了人，每天都是情人节。">
+    
+        <link rel="alternate" type="application/atom+xml" title="寒月轩的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/header.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/me.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">寒月轩</h5>
+          <a href="mailto:hanyuexuan97@163.com" title="hanyuexuan97@163.com" class="mail">hanyuexuan97@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                档案
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                随笔
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/hanyuexuan97" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/3054806453" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">关于数组去重的案例</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">关于数组去重的案例</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-14T11:20:42.000Z" itemprop="datePublished" class="page-time">
+  2017-02-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#每日一句"><span class="post-toc-number">1.</span> <span class="post-toc-text">每日一句</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#If-you-fall-in-love-with-your-Mr-Right-every-day-is-like-Valentine’s-Day"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">If you fall in love with your Mr Right,every day is like Valentine’s Day.</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其实爱对了人，每天都是情人节。"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">其实爱对了人，每天都是情人节。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、引言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、引言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、技术"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、技术</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">结语</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐~</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-关于数组去重的案例"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">关于数组去重的案例</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-02-14 19:20:42" datetime="2017-02-14T11:20:42.000Z"  itemprop="datePublished">2017-02-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<h1 id="每日一句"><a href="#每日一句" class="headerlink" title="每日一句"></a>每日一句</h1></blockquote>
+<h3 id="If-you-fall-in-love-with-your-Mr-Right-every-day-is-like-Valentine’s-Day"><a href="#If-you-fall-in-love-with-your-Mr-Right-every-day-is-like-Valentine’s-Day" class="headerlink" title="If you fall in love with your Mr Right,every day is like Valentine’s Day."></a>If you fall in love with your Mr Right,every day is like Valentine’s Day.</h3><h3 id="其实爱对了人，每天都是情人节。"><a href="#其实爱对了人，每天都是情人节。" class="headerlink" title="其实爱对了人，每天都是情人节。"></a>其实爱对了人，每天都是情人节。</h3><a id="more"></a>
+<blockquote>
+<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2></blockquote>
+<h3 id="今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。"><a href="#今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。" class="headerlink" title="今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。"></a>今天2月14日，情人节，就连金山词霸都在过情人节，不过这句话说的确实也对，爱对了人，每天都是情人节，爱错了人，每天都是愚人节。</h3><h3 id="今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。"><a href="#今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。" class="headerlink" title="今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。"></a>今天主要是关于数组去重的一些技术分享，可能略有瑕疵，希望各位能够与博主共勉，感谢各位。</h3><blockquote>
+<h2 id="二、技术"><a href="#二、技术" class="headerlink" title="二、技术"></a>二、技术</h2></blockquote>
+<p>第一篇是关于如何输出数组中最小的数字的方法。<br>首先定义了一个数组，数组中随便放了一些数字，然后定义了一个      num ，当然，这个 num 的值并不是固定的，任何一个数字都是可以的。<br>再接下来就是通过for循环去遍历数组了，在遍历数组的时候用定义的 num 与数组中的每一个数字进行比较，如果大于数组中的这个数字，那么就把 num 重新定义为这个数字，这样就能将数组中最小的那个数字输出了，代码如下：<br><code>var arr = [1,121,2,5,5,6,8,50,0,0];
+var num = arr[0];
+for(var j = 0; j &lt; arr.length - 1; j++) {
+    (function (a) {
+        if(num &gt; arr[a]) {
+            num = arr[a];
+        }
+    })(j)
+}
+console.log(num);</code><br>第二篇是关于如何找到字符串中出现次数最多的字母，并且将它出现的次数记录并输出的方法。<br>首先同样是定义了一个字符串 str ，然后又定义了一个空的对象 obj ，通过for循环将字符串中的字符依次输出，并且计算出他们出现的次数，然后通过for in利用上一篇比较大小的原理将二者输出即可，代码如下：<br><code>var str = &#39;aaabaabb&#39;;
+var obj = {};
+for(var i = 0; i &lt; str.length; i++){
+    var k = str.charAt(i);
+    if(obj[k]) {
+        obj[k]++;
+    }else {
+        obj[k] = 1;
+    }
+}
+var m=0;
+var i=null;
+for(var k in obj){
+    if(obj[k] &gt; m){
+        m = obj[k];
+        i = k;
+    }
+}
+console.log(i+&#39;:&#39;+m);</code></p>
+<blockquote>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2></blockquote>
+<h3 id="2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐"><a href="#2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐" class="headerlink" title="2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐~"></a>2月14日这个甜蜜的日子，愿你的身边都是那个对的ta！祝大家情人节快乐~</h3>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-02-17T12:58:23.156Z" itemprop="dateUpdated">2017-02-17 20:58:23</time>
+</span><br>
+
+
+        此文章版权专属，非常靠谱的寒月轩团队
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/me.jpg" alt="寒月轩">
+            寒月轩
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/出现最多的字符/">出现最多的字符</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组去重/">数组去重</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最小的数字/">最小的数字</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/02/14/关于数组去重的案例/&title=《关于数组去重的案例》 — 寒月轩的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/02/14/关于数组去重的案例/&title=《关于数组去重的案例》 — 寒月轩的博客&source=
+每日一句
+If you fall in love with your Mr Right,every day is like Valentine’s Da..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/02/14/关于数组去重的案例/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于数组去重的案例》 — 寒月轩的博客&url=http://yoursite.com/2017/02/14/关于数组去重的案例/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/02/14/关于数组去重的案例/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/29/展望2017/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">展望2017</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/15/传说中的完美继承，666+/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">传说中的完美继承，666</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+
+        
+        <li>
+            <img src="/img/zhifubao.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>寒月轩 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/02/14/关于数组去重的案例/&title=《关于数组去重的案例》 — 寒月轩的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/02/14/关于数组去重的案例/&title=《关于数组去重的案例》 — 寒月轩的博客&source=
+每日一句
+If you fall in love with your Mr Right,every day is like Valentine’s Da..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/02/14/关于数组去重的案例/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于数组去重的案例》 — 寒月轩的博客&url=http://yoursite.com/2017/02/14/关于数组去重的案例/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/02/14/关于数组去重的案例/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aQY6DQAwFUe5/aUaaLROob0NGtKtXUQjEj4XVbXvb8Np/1/Gb40qvfnrm9sSSIUPGaxn76ToyzsMlv+evjMQmQ4aMOQz+OBIcSdDkKolNhgwZMnjQJAiSOmXIkCGjn3DTbSJJ3ySty5AhQ0atfEYKZOm9j5/FZciQ8UJG2hj45ucH+xsyZMh4CWMPV+fv04QbRCVDhoylGbysf28jsza0cfGyZMiQsSiD39YZv6g9MxgUkyFDxtKMTmOAp8jaOAXfYsqQIWNtRm3rxn9DNp03NEplyJAxhlEbmEgDIkdTfoiVIUPGNAYJnW/mOsdjHo8MGTLmMNKweBGt0xwNRl1lyJAxhtFJefzYycMNmgoyZMgYw+BFt/TQS0p1tb6kDBkyJjA6Q1rnv+SH23SCArU/ZciQsRAj3cyRUj5vANw1iCZDhowJjP6Wjg9G9P/xj6syZMgYw+CDFOngBceTRB80BmTIkLEE44nWY+cYnG46gy6rDBkyXsvgCa4/hJGOmpEGqgwZMuYweMms1ozkyZRvBFHVUIYMGUswSEuglpr5S9nCdVF0kyFDxnKM2pE1xfcPuhcvQoYMGUsz0jRXS4jn93bwWy1by5Ah44WMu0r/vJFZ2z5evEoZMmQMYJAyWW3AKxiYCJP+x9qhDBkyBjN4WrzrmUHylSFDhozS2FatYVnbvMqQIWMCgxfrO0fN9K7gexkyZCzNeKIxwMv6ndLe4y1MGTJk/D/jB5LcvYtLOgH3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
